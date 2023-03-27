@@ -60,28 +60,44 @@ function netejaEx1() {
 function generaRandomArray() {
     var numeros = [];
     var NumMayor = 0;
+    var posición;
     for (let i = 0; i < 10; i++) {
-        var numeroAleatorio = Math.floor(Math.random() * 100);
+        var numeroAleatorio = Math.floor(Math.random() * (1, 100));
         numeros[i] = numeroAleatorio;
-        if (condition) {
-            
+        if (NumMayor < numeros[i]) {
+            NumMayor = numeros[i];
+            posición = i + 1;
         }
     }
-    var numMaximo = Math.max(numeros);
-    resultatArray.innerHTML = `Array: ${numeros}, Max: ${numMaximo}, Posición:`;
+    resultatArray.innerHTML = `Array: ${numeros} | Max: ${NumMayor} | Posición: ${posición}`;
 }
 
 function netejaEx2() {
-
+    resultatArray.innerHTML = "";
 }
 
 // Exercici 3: Estils CSS
 function canviaEstil() {
+    var RGB = [random(), random(), random()];
+    var RGBordes = [];
+    for (var i = 0; i < RGB.length; i++) {
+        RGBordes.push(255 - RGB[i]);
+    }
+    var colorFondo = `rgb(${RGB[0]},${RGB[1]},${RGB[2]})`;
+    var colorBorde = `rgb(${RGBordes[0]},${RGBordes[1]},${RGBordes[2]})`;
+    if (RGB[0] < 30 && RGB[1] < 30 && RGB[2] < 30) {
+        principal.style.color = "white";
+    } else {
+        principal.style.color = "black";
+    }
 
+    principal.style.backgroundColor = colorFondo;
+    principal.style.borderColor = colorBorde;
 }
 
 function netejaEstil() {
-
+    principal.style.backgroundColor = "white";
+    principal.style.borderColor = "black";
 }
 
 // Exercici 4: JSON
@@ -99,9 +115,27 @@ function carregaJSON() {
 }
 
 function pintaDadesJSON(data) {
-
+    var htmlAPintar = "";
+    htmlAPintar+= "<ol>";
+    data.peliculas.forEach(contenido => {
+        if (contenido.año < 2000) {
+            htmlAPintar+= `<li>${contenido.titulo} (${contenido.año})<ul>`;
+            contenido.actores.forEach(element => {
+                htmlAPintar += `<li>${element}</li>`;
+            });
+            htmlAPintar += "</ul>";
+        }
+    });
+    htmlAPintar += "</ol>";
+    resultatJSON.innerHTML = htmlAPintar;
 }
 
 function netejaLlista() {
+    resultatJSON.innerHTML = "";
+}
 
+
+/* MIS FUNCIONES */
+function random() {
+    return Math.round(Math.random() * 256);
 }
