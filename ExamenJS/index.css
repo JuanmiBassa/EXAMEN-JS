@@ -1,0 +1,59 @@
+body {
+    font-family: Tahoma, sans-serif;
+}
+
+main {
+    margin: 5%;
+    border: 5px solid black;
+    border-radius: 25px;
+}
+
+#header {
+    text-align: center;
+}
+
+#titol {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.enunciat,
+#principal>ol>li {
+    font-weight: bold;
+    font-size: large;
+}
+
+.explicacio {
+    font-style: italic;
+    font-weight: normal;
+    font-size: small;
+}
+
+.exercici {
+    font-weight: normal;
+    font-size: medium;
+}
+
+
+#principal>ol>li {
+    border-bottom: 1px solid black;
+    width: 75%
+}
+
+button {
+    background-color: brown;
+    color: white;
+}
+
+input {
+    background-color: beige;
+}
+
+#resultatJSON li{
+    font-size: medium;
+    font-weight: normal;
+}
+
+.pista{
+    color:darkorange
+}

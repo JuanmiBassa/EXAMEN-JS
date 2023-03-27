@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen JS</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body id="cos">
+
+    <header id="header">
+        <div>
+            <img src="https://fp.esliceu.com/wp-content/uploads/2017/09/cropped-ximanela.jpg" alt="logo"
+                title="Logo Es Liceu">
+        </div>
+        <div>
+            <span id="titol">Llenguatges de Marques - Examen JS - 27/03/2023</span>
+        </div>
+    </header>
+
+    <main id="principal">
+        <ol>
+            <li>
+                <p class="enunciat">Suma d'hores <br>
+                    (25 punts)</p>
+                <p class="explicacio">
+                    Es vol calcular el resultat de la suma de dues hores amb els seus minuts<br>
+                    Per exemple: 04:35 + 12:40 fan un total de 17:15 <br>
+                    Pensau en mostrar correctament el formar d'hores i minuts amb dos números (04:05, no 4:5), i que no pot haver minuts >60<br>
+                    Heu d'avisar a l'usuari si falten valors<br>
+                    <span class="pista">Pista: feu servir el mètode <a href="https://www.w3schools.com/jsref/jsref_split.asp"
+                        target="_blank">split()</a> per separar la hora de l'input en hores i minuts. Recordau que
+                    aquest mètode retorna un Array.</span>
+                </p>
+                <p class="exercici">
+                    <input type="time" id="inputTime1"> + 
+                    <input type="time" id="inputTime2">
+                    <br>
+                    <button id="calculaHora">Calcula</button>
+                    <button id="netejaEx1">Reset</button>
+                    <br>
+                    <label>Resultat:
+                        <span id="resultatTime"></span>
+                    </label>
+                </p>
+            </li>
+
+            <li>
+                <p class="enunciat">Array de números aleatoris <br> (20 punts)</p>
+                <p class="explicacio">
+                    Volem cercar dins un array de números aleatoris quin és el nombre més gran que s'ha trobat i a quina posició (la primera).<br>
+                    Haureu de generar un array de 10 posicions de números del 1 al 100, pintar-lo per pantalla, i cercar el número més gran.<br>
+                    Els números són sencers<br>
+                    Exemple: [53,94,21,42,38,52,99,6] ha de retornar 6 (recordau que els arrays comencen per la posició 0)<br>
+                </p>
+                <p class="exercici">
+                    <button id="generaArray">Genera</button>
+                    <button id="netejaEx2">Reset</button>
+                    <br>
+                    <label>Resultat:
+                        <span id="resultatArray"></span>
+                    </label>
+                </p>
+            </li>
+
+            <li>
+                <p class="enunciat">Estils CSS <br> (20 punts)</p>
+                <p class="explicacio">
+                    Posar un border i un fons de colors aleatoris al main ("principal").<br>
+                    El color del border i del fons han de ser contraris (inversos).<br>
+                    Si el color de fons generat és molt fosc (tots els seus components son inferiors a 30, per exemple), canvieu el color de texte a blanc<br>
+                    El botó "Reset" torna deixar els colors com al principi (blanc i negre). <br>
+                    <span class="pista">Pista: heu de fer servir les propietats del DOM Style
+                    <code>backgroundColor</code>, <code>borderColor</code> i <code>color</code>.</span>
+                </p>
+                <p class="exercici">
+                    <button id="canviaEstil">Canvi de colors</button>
+                    <button id="netejaEstil">Reset</button>
+                </p>
+            </li>
+
+            <li>
+                <p class="enunciat">JSON <br> (35 punts)</p>
+                <p class="explicacio">
+                    A partir del fitxer <code>peliculas.json</code>, heu de mostrar una llista "OL" amb la seva informació:<br>
+                    Heu de mostrar el títol de la película i entre parèntesi el seu any.<br>
+                    A una subllista "UL" heu de mostrar els actors protagonistes.<br>
+                    Només heu de carregar les películes anteriors a l'any 2000.<br>
+                    <a href="./exempleJSON.png" target="_blank">Exemple de com quedaria</a>
+                </p>
+                <p class="exercici">
+                    <button id="carregaJSON">Carrega JSON</button>
+                    <button id="netejaLlista">Neteja Llista</button>
+                    <br>
+                    <label>Resultat:
+                        <div id="resultatJSON"></div>
+                    </label>
+                </p>
+            </li>
+        </ol>
+    </main>
+
+    <footer>
+        &copy; Daniel Martínez
+    </footer>
+
+    <!--Nuestro script-->
+    <script src="index.js"></script>
+</body>
+
+</html>
