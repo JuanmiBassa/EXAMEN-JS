@@ -36,6 +36,7 @@ function calculaHora() {
         resultatTime.innerHTML = `Faltan valores.`;
         resultatTime.style.color = "red";
     } else {
+        resultatTime.style.color = "black";
         var horas = parseInt(horaDividida1[0]) + parseInt(horaDividida2[0]);
         var minutos = parseInt(horaDividida1[1]) + parseInt(horaDividida2[1]);
         if (minutos > 59) {
